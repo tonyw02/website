@@ -1,20 +1,12 @@
 from PIL import Image
 import requests
 import streamlit as st 
-from streamlit_lottie import st_lottie
 
 
 # ----- Page layout -----
 st.set_page_config(page_title="My Webpage", page_icon=":gear:", layout="wide")
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None 
-    return r.json()
-
 # ----- Loading Assets -----
-lottie_coding = load_lottieurl("https://lottie.host/bf9430f2-2a05-4039-8dd5-802e21c12a3e/8vVzBaFz9e.json")
 img_contact_form = Image.open("images/oval_profile.png")
 
 # ----- Header Section -----
